@@ -1,3 +1,5 @@
+package application;
+
 public class FilaSimples {
 
     private Integer[] elementos;
@@ -13,7 +15,7 @@ public class FilaSimples {
         fim = -1;
         tamanho=0;
     }
-
+    //aumenta a fila / enfileire
     public void enqueue(Integer elemento){
         if (tamanho==capacidade){
             throw new IllegalStateException(
@@ -24,7 +26,7 @@ public class FilaSimples {
         elementos[fim] = elemento;
         tamanho++;
     }
-
+    //diminui a fila / desinfileire
     public Integer dequeue(){
         if (tamanho == 0) {
             throw new IllegalStateException(
